@@ -7,7 +7,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
-@FeignClient(name = "swapi", url = "https://swapi.dev/api")
+@FeignClient(name = "swapi", url = "${swapi.url}")
 public interface SwapiGateway {
 
     @GetMapping(path = "/people")
